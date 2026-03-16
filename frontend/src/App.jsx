@@ -12,18 +12,20 @@ function App() {
       <header className="app-header">
         <div className="header-inner">
           <a href="/" className="logo">
-            <span className="logo-icon">🦴</span>
-            <span className="logo-text">FractureAI</span>
+            <span className="logo-icon">
+              <img src="/src/images/logo.jpeg" alt="" />
+            </span>
+            <span className="logo-text">AAkriti</span>
           </a>
           <nav>
             <a href="/">Home</a>
-            <a
+            {/* <a
               href="https://github.com"
               target="_blank"
               rel="noreferrer"
             >
               GitHub
-            </a>
+            </a> */}
           </nav>
         </div>
       </header>
