@@ -63,24 +63,24 @@ class ModelLoader:
             self.yolo_model = None
 
     # ── MarianMT translator ────────────────────────────────
-    def _load_translator(self):
-        try:
-            from transformers import MarianMTModel, MarianTokenizer
+    # def _load_translator(self):
+    #     try:
+            # from transformers import MarianMTModel, MarianTokenizer
 
-            model_name = "Helsinki-NLP/opus-mt-en-hi"
-            cache = os.path.join(MODEL_DIR, "translator_cache")
-            logger.info(f"Loading MarianMT ({model_name}) …")
-            self.translator_tokenizer = MarianTokenizer.from_pretrained(
-                model_name, cache_dir=cache
-            )
-            self.translator_model = MarianMTModel.from_pretrained(
-                model_name, cache_dir=cache
-            )
-            logger.info("✅  Translator model ready")
-        except Exception as exc:
-            logger.warning(f"⚠️  Translator load failed: {exc}")
-            self.translator_model = None
-            self.translator_tokenizer = None
+            # model_name = "Helsinki-NLP/opus-mt-en-hi"
+            # cache = os.path.join(MODEL_DIR, "translator_cache")
+            # logger.info(f"Loading MarianMT ({model_name}) …")
+            # self.translator_tokenizer = MarianTokenizer.from_pretrained(
+            #     model_name, cache_dir=cache
+            # )
+            # self.translator_model = MarianMTModel.from_pretrained(
+            #     model_name, cache_dir=cache
+            # )
+        #     logger.info("✅  Translator model ready")
+        # except Exception as exc:
+        #     logger.warning(f"⚠️  Translator load failed: {exc}")
+        #     self.translator_model = None
+        #     self.translator_tokenizer = None
 
     # ── accessors ──────────────────────────────────────────
     def get_yolo(self):

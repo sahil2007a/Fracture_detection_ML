@@ -24,15 +24,15 @@ def download_yolo():
 
 def download_translator():
     print("\n📦  Downloading MarianMT en→hi …")
-    try:
-        from transformers import MarianMTModel, MarianTokenizer
-        name = "Helsinki-NLP/opus-mt-en-hi"
-        cache = os.path.join(MODEL_DIR, "translator_cache")
-        MarianTokenizer.from_pretrained(name, cache_dir=cache)
-        MarianMTModel.from_pretrained(name, cache_dir=cache)
-        print("✅  Translator ready")
-    except Exception as e:
-        print(f"⚠️  Translator download failed: {e}")
+    # try:
+        # from transformers import MarianMTModel, MarianTokenizer
+        # name = "Helsinki-NLP/opus-mt-en-hi"
+        # cache = os.path.join(MODEL_DIR, "translator_cache")
+        # MarianTokenizer.from_pretrained(name, cache_dir=cache)
+        # MarianMTModel.from_pretrained(name, cache_dir=cache)
+        # print("✅  Translator ready")
+    # except Exception as e:
+    #     print(f"⚠️  Translator download failed: {e}")
 
 
 if __name__ == "__main__":
